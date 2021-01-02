@@ -6,12 +6,14 @@ import {
   ScrollView,
   Button,
   TextInput,
+  Image,
 } from 'react-native';
 import Generator from './src/generator';
 import Header from './src/header';
 import Input from './src/input';
 import NumList from './src/numlist';
 import Picker from './src/picker';
+import Ex01 from './assets/images/ex01.jpg';
 
 class App extends Component {
   state = {
@@ -37,27 +39,14 @@ class App extends Component {
   render() {
     return (
       <View style={styles.mainView}>
-        <Picker />
-        {/* <Header name={this.state.appName} />
-        <View>
-          <Text
-            onPress={() => alert('text touch event')}
-            style={styles.mainText}>
-            Hello World
-          </Text>
-        </View>
-
-        <Generator add={this.onAddRandomNum} />
-        <ScrollView
-          style={{width: '100%'}}
-          // onMomentumScrollBegin={() => alert('begin')}
-          // onMomentumScrollEnd={() => alert('end')}
-          // onScroll={() => alert('Scrolling')}
-          // onContentSizeChange={(width, height) => alert(height)}
-          bounces={false}>
-          <NumList num={this.state.random} delete={this.onNumDelete} />
-        </ScrollView> */}
-
+        <Image
+          // source={Ex01}
+          source={{uri: 'https://picsum.photos/id/237/200/300'}}
+          style={styles.image}
+          resizeMode="contain"
+          onLoadEnd={() => alert('Image loaded!')}
+        />
+        {/* <Picker />
         <TextInput
           value={this.state.myTextInput}
           style={styles.input}
@@ -74,7 +63,7 @@ class App extends Component {
               {item}
             </Text>
           ))}
-        </ScrollView>
+        </ScrollView> */}
       </View>
     );
   }
@@ -114,6 +103,11 @@ const styles = StyleSheet.create({
     marginTop: 20,
     fontSize: 25,
     padding: 10,
+  },
+  image: {
+    backgroundColor: 'red',
+    width: '100%',
+    height: 700,
   },
 });
 
