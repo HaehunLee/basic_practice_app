@@ -40,32 +40,32 @@ class App extends Component {
   render() {
     return (
       <View style={styles.mainView}>
-        <Modal />
-        {/* <Image
-          // source={Ex01}
-          source={{uri: 'https://picsum.photos/id/237/200/300'}}
-          style={styles.image}
-          resizeMode="contain"
-          onLoadEnd={() => alert('Image loaded!')}
-        /> */}
-        {/* <Picker />
-        <TextInput
-          value={this.state.myTextInput}
-          style={styles.input}
-          onChangeText={this.onChangeInput}
-          multiline={true} // 다중 줄
-          maxLength={100} // 글자수 제한
-          autoCapitalize={'none'} // 대문자 자동 수정 방지
-          // editable={false}
-        />
-        <Button title="Add Text Input" onPress={this.onAddTextInput} />
         <ScrollView style={{width: '100%'}}>
+          <Modal />
+          <Image
+            // source={Ex01}
+            source={{uri: 'https://picsum.photos/id/237/200/300'}}
+            style={styles.image}
+            resizeMode="contain"
+            onLoadEnd={() => alert('Image loaded!')}
+          />
+          <Picker />
+          <TextInput
+            value={this.state.myTextInput}
+            style={styles.input}
+            onChangeText={this.onChangeInput}
+            multiline={true} // 다중 줄
+            maxLength={100} // 글자수 제한
+            autoCapitalize={'none'} // 대문자 자동 수정 방지
+            // editable={false}
+          />
+          <Button title="Add Text Input" onPress={this.onAddTextInput} />
           {this.state.alphabet.map((item, idx) => (
             <Text style={styles.mainText} key={idx}>
               {item}
             </Text>
           ))}
-        </ScrollView> */}
+        </ScrollView>
       </View>
     );
   }

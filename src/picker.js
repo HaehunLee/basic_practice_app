@@ -18,18 +18,13 @@ const PickerComponent = () => {
         value={value}
         minimumValue={0}
         maximumValue={100}
-        onValueChange={this.sliderValueChange}
+        onValueChange={sliderValueChange}
         maximumTrackTintColor="red"
         minimumTrackTintColor="blue"
         step={1}
       />
       <Text style={styles.input}>{value}</Text>
-      <ActivityIndicator
-        style={{paddingTop: 200}}
-        size="large"
-        color="green"
-        animating={false}
-      />
+      <ActivityIndicator size="large" color="green" animating={true} />
       <Picker
         style={{height: 50, width: 250}}
         selectedValue={country}
