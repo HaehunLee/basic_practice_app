@@ -14,6 +14,7 @@ import Input from './src/input';
 import NumList from './src/numlist';
 import Picker from './src/picker';
 import Ex01 from './assets/images/ex01.jpg';
+import Modal from './src/modal';
 
 class App extends Component {
   state = {
@@ -39,13 +40,14 @@ class App extends Component {
   render() {
     return (
       <View style={styles.mainView}>
-        <Image
+        <Modal />
+        {/* <Image
           // source={Ex01}
           source={{uri: 'https://picsum.photos/id/237/200/300'}}
           style={styles.image}
           resizeMode="contain"
           onLoadEnd={() => alert('Image loaded!')}
-        />
+        /> */}
         {/* <Picker />
         <TextInput
           value={this.state.myTextInput}
