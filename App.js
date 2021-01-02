@@ -11,31 +11,9 @@ import Generator from './src/generator';
 import Header from './src/header';
 import Input from './src/input';
 import NumList from './src/numlist';
+import Picker from './src/picker';
 
 class App extends Component {
-  // state = {
-  //   appName: 'My First App',
-  //   random: [36, 999],
-  // };
-
-  // onAddRandomNum = () => {
-  //   const randomNum = Math.floor(Math.random() * 100) + 1;
-  //   this.setState((prevState) => {
-  //     return {
-  //       random: [...prevState.random, randomNum],
-  //     };
-  //   });
-  // };
-
-  // onNumDelete = (position) => {
-  //   const newArray = this.state.random.filter((num, index) => {
-  //     return position != index;
-  //   });
-  //   this.setState({
-  //     random: newArray,
-  //   });
-  // };
-
   state = {
     myTextInput: '',
     alphabet: ['a', 'b', 'c'],
@@ -59,6 +37,7 @@ class App extends Component {
   render() {
     return (
       <View style={styles.mainView}>
+        <Picker />
         {/* <Header name={this.state.appName} />
         <View>
           <Text
